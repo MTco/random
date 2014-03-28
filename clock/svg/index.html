@@ -30,6 +30,9 @@
 				.rotate(30*i, r, r);
 		}
 		for (i = 0; i < 72; i++) {
+			if (i % 6 == 0) {
+				continue;
+			}
 			var m = canvas
 				.path('Mx,6Lx,2'.replace(/x/g, r))
 				.attr({'stroke-width': 1})
@@ -47,7 +50,7 @@
 		
 		this.s.transform('Ry,x,x'.replace(/x/g, this.r).replace('y', s/60 * 360));
 		this.m.transform('Ry,x,x'.replace(/x/g, this.r).replace('y', m/60 * 360));
-		this.h.transform('Ry,x,x'.replace(/x/g, this.r).replace('y', h/60 * 360));
+		this.h.transform('Ry,x,x'.replace(/x/g, this.r).replace('y', h/24 * 360));
 		
 		var self = this;
 		setTimeout(function() {
