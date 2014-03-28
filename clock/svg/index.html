@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+	<head>
+	
+	<title>SVG Clock</title>
+	<meta charset="utf-8">
+	
+	<style>
+	html,
+	body {
+		height: 100%;
+		margin: 0;
+		width: 100%;
+	}
+	body {
+		display: table;
+	}
+	#content {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	#clock {
+		margin: -75px auto 0;
+		width: 250px;
+	}
+	</style>
+	
+	</head>
+	<body>
+	
+	<div id="content">
+		<div id="clock"></div>
+	</div>
+	
+	<script src="js/raphael.js"></script>
+	<script>
+	function Clock(id, d) {
+		var d = this.d = 250;
+		var r = this.r = d/2;
+		
+		var canvas = Raphael(id, d, d);
+		
+		this.h = canvas
+			.path('Mx,xLx,45'.replace(/x/g, r))
+			.attr({'stroke-width': 8});
+		this.m = canvas
+			.path('Mx,xLx,20'.replace(/x/g, r))
+			.attr({'stroke-width': 6});
+		this.s = canvas
+			.path('Mx,yLx,5'.replace(/x/g, r).replace('y', r+15))
+			.attr({stroke: '#f00'});
+		
+		var i;
+		for (i = 0; i < 12; i++) {
+			var h = canvas
+				.path('Mx,12Lx,1'.replace(/x/g, r))
+				.attr({'stroke-width': 4})
+				.rotate(30*i, r, r);
+		}
+		for (i = 0; i < 72; i++) {
+			var m = canvas
+				.path('Mx,6Lx,2'.replace(/x/g, r))
+				.attr({'stroke-width': 1})
+				.rotate(5*i, r, r);
+		}
+		
+		this.update();
+	}
+	
+	Clock.prototype.update = function(ms) {
+		var d = new Date();
+		var s = d.getSeconds() + d.getMilliseconds()/1000;
+		var m = s/60 + d.getMinutes();
+		var h = m/60 + d.getHours();
+		
+		this.s.transform('Ry,x,x'.replace(/x/g, this.r).replace('y', s/60 * 360));
+		this.m.transform('Ry,x,x'.replace(/x/g, this.r).replace('y', m/60 * 360));
+		this.h.transform('Ry,x,x'.replace(/x/g, this.r).replace('y', h/60 * 360));
+		
+		var self = this;
+		setTimeout(function() {
+			self.update();
+		}, 10);
+	};
+	
+	new Clock('clock');
+	</script>
+	
+	</body>
+</html>
