@@ -1,4 +1,4 @@
 ### Preview
 
-* http://erming.github.io/gists/clock/
-* http://erming.github.io/gists/slide-menu/
+* http://erming.github.io/random/clock/
+* http://erming.github.io/random/slide-menu/
