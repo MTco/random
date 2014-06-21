@@ -1,0 +1,26 @@
+body {
+	margin: 100px;
+}
+.icon {
+	height: 16px;
+	position: relative;
+	width: 18px;
+}
+.hamburger,
+.hamburger:before,
+.hamburger:after {
+	background: #000;
+	content: "";
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+.hamburger {
+	height: 25%;
+}
+.hamburger:before {
+	top: 150%;
+}
+.hamburger:after {
+	top: 300%;
+}
