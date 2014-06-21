@@ -15,21 +15,23 @@ code {
 	position: relative;
 	width: 64px;
 }
-.hamburger,
-.hamburger:before,
-.hamburger:after {
+.cross,
+.cross:before {
 	background: #32d6a8;
 	content: "";
 	height: 100%;
 	position: absolute;
 	width: 100%;
 }
-.hamburger {
+.cross {
+	top: 37.5%;
 	height: 25%;
+	-webkit-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
 }
-.hamburger:before {
-	top: 150%;
-}
-.hamburger:after {
-	top: 300%;
+.cross:before {
+	-webkit-transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	        transform: rotate(90deg);
 }
