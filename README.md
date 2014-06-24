@@ -7,4 +7,4 @@
 #### CSS icons:
 
 * [cross](http://erming.github.io/random/css-icons/cross/)
-* [hamburger](http://erming.github.io/random/css-icons/cross/)
+* [hamburger](http://erming.github.io/random/css-icons/hamburger/)
