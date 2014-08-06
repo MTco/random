@@ -8,14 +8,14 @@ __ajaxify__
 A jQuery plugin that turns page loads into AJAX request.
 
 __autohotkey-apple-keyboard__  
-.ahk script for using Apple keyboard on Windows
+.ahk script for using Apple keyboard on Windows.
 
 __clock__  
-A live clock made with raphael.js  
+A live clock made with raphael.js.  
 [Demo](http://erming.github.io/random/clock/)
 
 __css-icons__  
-Icons made with CSS only.  
+Icons made with CSS only:  
   1. [Cross](http://erming.github.io/random/css-icons/cross/)
   2. [Hamburger](http://erming.github.io/random/css-icons/hamburger/)
 
@@ -32,3 +32,7 @@ __overflow-scrolling__
 __slide-menu__  
 A CSS sidebar slide-in menu.  
 [Demo](http://erming.github.io/random/slide-menu/)
+
+## License
+
+Available under [the MIT license](http://mths.be/mit).
