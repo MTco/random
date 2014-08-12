@@ -7,9 +7,9 @@
     "type": "git",
     "url": "https://github.com/erming/game-prototype"
   },
-	"scripts": {
-		"start": "node index"
-	},
+  "scripts": {
+    "start": "node index"
+  },
   "license": "MIT",
   "dependencies": {
     "connect": "^2.19.6"
